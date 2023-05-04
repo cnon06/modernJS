@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+
+    //   function kisiES5(name, job, birthday) {
+    //     this.name = name;
+    //     this.job = job;
+    //     this.birthday = birthday;
+    //     this.getAge =  function()
+    //     {
+    //         let now = new Date();
+    //         return now.getFullYear() - this.birthday;
+    //     }
+    //   }
+
+   
+
+      class Person {
+        constructor(name, job, birthday) {
+          console.log("object is created.");
+          this.name = name;
+          this.job = job;
+          this.birthday = birthday;
+
+
+        }
+
+
+        getAge()
+        {
+            let now = new Date();
+            return now.getFullYear() - this.birthday;
+        }
+
+        get name()
+        {
+          return this._name;
+        }
+
+        set name(value)
+        {
+          if(value.length < 3)
+          {
+            console.log('you must enter 3 chars at least.');
+            return;
+          }
+          this._name = value;
+        }
+
+
+        get birthday()
+        {
+          return this._birthday;
+        }
+
+        set birthday(value)
+        {
+          let now = new Date();
+          if(value < 1900 || value > new Date().getFullYear())
+          {
+            console.log('date is wrong.');
+            return;
+          }
+          this._birthday = value;
+        }
+      
+      }
+
+      
+      let person1 = new Person('si','baby','3022');
+      console.log(person1)
+      console.log(person1.getAge())
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+       const numbers = [1,3,4,6,7,9,8];
+
+    //    const checkOdd = (number) => number%2 ==1;
+
+     
+
+        console.log(numbers.filter((number) => number%2 ==1));
+
+        console.log(numbers.map((number) => number%2 ==1));
+
+        const products = 
+        [
+            {ProductName: 'iphone10', price: 10000},
+            {ProductName: 'iphone12', price: 11000},
+            {ProductName: 'iphone13', price: 12000},
+            {ProductName: 'iphone13pro', price: 14000},
+
+        ]
+
+        console.log(products.filter(value => value.price > 11000));
+        console.log(products.filter(value => value.price > 11000).map(value => value.ProductName));
+
+    </script>
+    
+</body>
+
+</html>

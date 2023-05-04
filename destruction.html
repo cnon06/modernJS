@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nameAndSurname =['sinan','alagöz', 'izmir', 'buca', 'yenigün'];
+        let [name,surName, ...adress] = nameAndSurname;
+        console.log(name);
+        console.log(surName);
+        console.log(adress);
+
+
+        let product = {brand:'Apple', model: 'iPhone', price: 12000};
+
+        let {brand,model,price} = product;
+        console.log(brand);
+        console.log(model);
+        console.log(price);
+    </script>
+</body>
+</html>

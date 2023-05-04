@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const ogrenciler = new Map();
+        ogrenciler.set(1,'ali yilmaz');
+        ogrenciler.set('44342','efe can');
+        ogrenciler.set(true,'ali can');
+
+        console.log(ogrenciler);
+        console.log(ogrenciler.get(1));
+        console.log(ogrenciler.get(true));
+        console.log(ogrenciler.size);
+        console.log(ogrenciler.has('44342'));
+        console.log(ogrenciler.has('4432'));
+        // console.log(ogrenciler.delete(1));
+        console.log(ogrenciler);
+        // ogrenciler.clear();
+        // console.log(ogrenciler);
+
+        for(let x of ogrenciler.keys())
+        {
+            console.log(x);
+        }
+        console.log('------------------');
+        for(let x of ogrenciler.values())
+        {
+            console.log(x);
+        }
+        console.log('------------------');
+        for(let x of ogrenciler.entries())
+        {
+            console.log(x);
+        }
+        console.log('------------------');
+        for(let x of ogrenciler.entries())
+        {
+            console.log(x[0]);
+        }
+        console.log('------------------');
+        for(let x of ogrenciler.entries())
+        {
+            console.log(x[1]);
+        }
+        console.log('------------------');
+        for(let [key,value] of ogrenciler.entries())
+        {
+            console.log(key+' , '+value);
+        }
+
+        console.log('------------------');
+        let user = {userName:'Sinan'}
+        ogrenciler.set(user, '444345');
+        console.log(ogrenciler);
+
+    </script>
+</body>
+</html>

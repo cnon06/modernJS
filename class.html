@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+
+    //   function kisiES5(name, job, birthday) {
+    //     this.name = name;
+    //     this.job = job;
+    //     this.birthday = birthday;
+    //     this.getAge =  function()
+    //     {
+    //         let now = new Date();
+    //         return now.getFullYear() - this.birthday;
+    //     }
+    //   }
+
+    function kisiES5(name, job, birthday) {
+        this.name = name;
+        this.job = job;
+        this.birthday = birthday;
+     
+      }
+
+      kisiES5.prototype.getAge =  function()
+        {
+            let now = new Date();
+            return now.getFullYear() - this.birthday;
+        }
+      
+      let sinan = new kisiES5("sinan", "teacher", "1980");
+      console.log(sinan.getAge())
+
+      class KisiES6 {
+        constructor(name, job, birthday) {
+          console.log("object is created.");
+          this.name = name;
+          this.job = job;
+          this.birthday = birthday;
+
+
+        }
+
+
+        getAge()
+        {
+            let now = new Date();
+            return now.getFullYear() - this.birthday;
+        }
+      
+      }
+
+      let object = new KisiES6();
+      let person1 = new KisiES6('sinem','baby','2022');
+      console.log(person1)
+      console.log(person1.getAge())
+
+    </script>
+  </body>
+</html>

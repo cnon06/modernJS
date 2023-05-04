@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Kisi
+        {
+            constructor (ad, birthDay){
+                this.ad = ad;
+                this.birthDay = birthDay;
+                console.log('kisi constructor');
+            };
+
+            yasHesapla()
+            {
+                return new Date().getFullYear -  this.birthDay;
+            }
+
+        }
+
+
+        class Ogrenci extends Kisi
+        {
+            constructor (ad, birthDay, okulNo){
+                super(ad, birthDay);
+                this.okulNo = okulNo;
+               
+               console.log('ogrenci constructor');
+                // this.ad = ad;
+                // this.birthDay = birthDay;
+            };
+
+            yasHesapla()
+            {
+                return new Date().getFullYear -  this.birthDay;
+            }
+
+        }
+
+        let kisi = new Kisi('sinem',2022);
+        let ogrenci = new Ogrenci('sinem',2022,123);
+
+</script>
+</body>
+</html>
